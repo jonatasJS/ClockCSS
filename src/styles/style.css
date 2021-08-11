@@ -10,6 +10,155 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #091921;
+  --colorBG: #ff105e;
+}
+
+/* .form__group {
+  position: absolute;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: auto;
+  transform: translateY(-500%);
+  align-items: center; 
+  justify-content: center;
+}
+.form__field {
+  font-family: inherit;
+  width: 70vw;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus,
+.form__label:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+} */
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+ }
+  100% {
+    background-position: 100% 0;
+ }
+}
+.webflow-style-input {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  transform: translateY(-300%);
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  padding: 1.4rem 4rem 1.6rem 1rem;
+  background: rgba(57, 63, 84, 0.8);
+}
+
+@media only screen and (min-width: 750px) {
+  .webflow-style-input {
+    transform: translateY(-285%);
+    padding: 1.4rem 5rem 1.6rem 2rem;
+
+  }
+}
+.webflow-style-input:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee);
+  border-radius: 10px;
+  background-size: 500% auto;
+  animation: gradient 1s linear infinite;
+}
+.webflow-style-input:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999;
+  height: 2px;
+  border-radius: 10px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee);
+  filter: blur(5px);
+  z-index: -10;
+  background-size: 500% auto;
+  animation: gradient 1s linear infinite;
+}
+/* */
+.webflow-style-input input {
+  flex-grow: 1;
+  color: #bfd2ff;
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+.webflow-style-input input:focus { outline: none; }
+.webflow-style-input input::-webkit-input-placeholder {
+  color: #7881a1;
+  font-size: 1.5rem;
+}
+.webflow-style-input button {
+  color: #7881a1;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color 0.25s;
+  background: transparent;
+  border: 0;
+}
+.webflow-style-input button:hover {
+  color: #bfd2ff;
 }
 
 .clock {
@@ -72,15 +221,46 @@ body {
   position: absolute;
   width: 8px;
   height: 80px;
-  background: #ff105e;
+  background: var(--colorBG);
+  transition: transform 10ms ease-in-out;
   z-index: 10;
   border-radius: 6px 6px 0 0;
 }
 
 .mn::before {
-
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: var(--colorBG);
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+  transition: transform 10ms ease-in-out;
+  align-items: center;
 }
 
 .sc::before {
-  
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: linear-gradient(to right, #f00, #ffa500, #ff0, #008000, #00f, #4b0082, #ee82ee);
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+  background-position: 0% 0%;
+  background-size: 500% auto;
+  transition: transform 10ms ease-in-out;
+  animation: gradient 1s linear infinite;
+}
+
+div.session {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(57, 63, 84, 0.8);
+  margin-top: 45%;
+  border-radius: 10px;
 }

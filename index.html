@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clock CSS</title>
-  <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-  <div class="clock">
-    <div class="hour">
-      <div class="hr" id="hr"></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock CSS</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <div class="webflow-style-input">
+      <input class="" id="MnColor" type="email" placeholder="Put a color (ex.: #00ff44 or red)"></input>
+      <button id="btnColor" type="submit"><i class="fas fa-chevron-right"></i></button>
     </div>
-    <div class="min">
-      <div class="mn" id="mn"></div>
+    
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+      <div class="session">
+        <span id="sessionShow" style="color: white;"></span>
+      </div>
     </div>
-    <div class="sec">
-      <div class="sc" id="sc"></div>
-    </div>
-  </div>
-</body>
+
+    <script src="/script/script.js"></script>
+    <script src="https://kit.fontawesome.com/3af35cbbff.js" crossorigin="anonymous"></script>
+  </body>
 </html>
