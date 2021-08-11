@@ -38,7 +38,7 @@ setInterval(() => {
     let mm = day.getMinutes() * deg;
     let ss = day.getSeconds() * deg;
 
-    if(hh > 12) session = 'PM'
+    if(hh >= 12) session = 'PM'
     else session = 'AM'
 
     hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
