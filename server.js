@@ -8,4 +8,4 @@ app.get('/', (req, res) => {
   res.render(__dirname + '/index.html');
 });
 
-app.listen(5500, () => console.log('Iniciado!'));
+app.listen(process.env.PORT || process.env.port || 5500, () => console.log('Iniciado! ' + process.env.PORT || process.env.port || 5500));
